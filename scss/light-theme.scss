@@ -1,0 +1,67 @@
+$bgColor: #e4e4e4;
+$textColor: #000;
+$textColorWhite: #fff;
+$borderColor: #a5a5a5;
+$headerInfoTextColorHover: #969696;
+$bgInputColor: #050505;
+$bgButtonSaveColor: #337ab7;
+$bgButtonSaveColorHover: #116cb8;
+$bgButtonSaveColorActive: #0a5a9c;
+$bg2settingsInputAnimation: #c2c2c2;
+
+.light-theme {
+  background-color: #e4e4e4;
+  color: #000;
+
+  header {
+    background: $bgColor;
+    color: $textColor;
+  }
+  .settings-key-input {
+    background: $bgColor;
+    border-color: $borderColor;
+    color: $textColor;
+
+    &:focus {
+      animation: lightControlAnimation 1.5s infinite;
+      outline: none;
+    }
+  }
+
+  .header-info-text:hover {
+    color: $headerInfoTextColorHover;
+  }
+
+  .saveSettings {
+    background: $bgButtonSaveColor;
+    color: $textColorWhite;
+
+    &:hover {
+      background-color: $bgButtonSaveColorHover;
+    }
+
+    &:active {
+      background: $bgButtonSaveColorActive;
+    }
+  }
+
+  #appIcon {
+    background-image: url(../Assets/Themes/icon-dark-theme.png);
+  }
+
+  .toggle-theme-button {
+    background-image: url(../Assets/Themes/dark-theme.png);
+  }
+}
+
+@keyframes lightControlAnimation {
+  0% {
+    background: $bgColor;
+  }
+  50% {
+    background: $bg2settingsInputAnimation;
+  }
+  100% {
+    background: $bgColor;
+  }
+}

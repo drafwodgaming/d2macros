@@ -1,0 +1,66 @@
+$bgColor: #000;
+$textColor: #fff;
+$borderColor: #383838;
+$bgInputColor: #050505;
+$bgButtonSaveColor: #5f5f5f;
+$bgButtonSaveColorHover: #474747;
+$bgButtonSaveColorActive: #242424;
+
+.dark-theme {
+  background-color: $bgColor;
+  color: $textColor;
+
+  header {
+    background-color: $bgColor;
+    color: $textColor;
+  }
+
+  .settings-key-input {
+    background-color: $bgInputColor;
+    border-color: $borderColor;
+    color: $textColor;
+
+    &:focus {
+      animation: darkControlAnimation 1.5s infinite;
+      outline: none;
+    }
+  }
+
+  .header-info-text:hover {
+    color: #535353;
+  }
+
+  .saveSettings {
+    background: $bgButtonSaveColor;
+    color: $textColor;
+
+    &:hover {
+      background: $bgButtonSaveColorHover;
+      color: $textColor;
+
+      &:active {
+        background: #242424;
+      }
+    }
+  }
+
+  #appIcon {
+    background-image: url(../Assets/Themes/icon-light-theme.png);
+  }
+
+  .toggle-theme-button {
+    background-image: url(../Assets/Themes/light-theme.png);
+  }
+}
+
+@keyframes darkControlAnimation {
+  0% {
+    background: #050505;
+  }
+  50% {
+    background: #222222;
+  }
+  100% {
+    background: #050505;
+  }
+}
